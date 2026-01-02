@@ -1,0 +1,122 @@
+#screen-recorder-webcam-overlay {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 2147483647;
+  cursor: grab;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  border: 3px solid #fff;
+  transition: transform 0.2s;
+}
+
+#screen-recorder-webcam-overlay:hover {
+  transform: scale(1.05);
+}
+
+#screen-recorder-webcam-overlay video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scaleX(-1);
+}
+
+#screen-recorder-webcam-overlay.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+#screen-recorder-webcam-overlay.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+#screen-recorder-webcam-overlay.bottom-left {
+  bottom: 20px;
+  left: 20px;
+}
+
+#screen-recorder-webcam-overlay.bottom-right {
+  bottom: 20px;
+  right: 20px;
+}
+
+#screen-recorder-area-selector {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483646;
+}
+
+#screen-recorder-area-selector .area-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: crosshair;
+}
+
+#screen-recorder-area-selector .area-selection {
+  position: absolute;
+  display: none;
+  border: 2px dashed #e94560;
+  background: rgba(233, 69, 96, 0.1);
+  pointer-events: none;
+}
+
+#screen-recorder-area-selector .area-instructions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  text-align: center;
+  line-height: 1.6;
+}
+
+#screen-recorder-area-selector .area-instructions small {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+#screen-recorder-recording-indicator {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(233, 69, 96, 0.9);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 2147483647;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#screen-recorder-recording-indicator::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}

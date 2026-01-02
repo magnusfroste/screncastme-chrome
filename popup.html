@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screen Recorder</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Screen Recorder</h1>
+    
+    <div class="section">
+      <label>Capture Mode</label>
+      <div class="radio-group">
+        <label class="radio-option">
+          <input type="radio" name="captureMode" value="tab" checked>
+          <span>Current Tab</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="captureMode" value="screen">
+          <span>Entire Screen</span>
+        </label>
+        <label class="radio-option">
+          <input type="radio" name="captureMode" value="area">
+          <span>Select Area</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="checkbox-option">
+        <input type="checkbox" id="enableWebcam" checked>
+        <span>Enable Webcam Overlay</span>
+      </label>
+    </div>
+
+    <div class="section webcam-settings" id="webcamSettings">
+      <label>Webcam Position</label>
+      <div class="position-grid">
+        <button class="pos-btn" data-pos="top-left">↖</button>
+        <button class="pos-btn" data-pos="top-right">↗</button>
+        <button class="pos-btn" data-pos="bottom-left" >↙</button>
+        <button class="pos-btn active" data-pos="bottom-right">↘</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <label class="checkbox-option">
+        <input type="checkbox" id="enableAudio" checked>
+        <span>Record Audio</span>
+      </label>
+    </div>
+
+    <div class="controls">
+      <button id="startBtn" class="btn btn-primary">
+        <span class="icon">●</span> Start Recording
+      </button>
+      <button id="stopBtn" class="btn btn-danger" disabled>
+        <span class="icon">■</span> Stop Recording
+      </button>
+    </div>
+
+    <div id="status" class="status"></div>
+    <div id="timer" class="timer hidden">00:00</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
