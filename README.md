@@ -1,62 +1,62 @@
 # ScreenCastMe - Chrome Extension
 
-En Chrome-tillägg för att spela in skärmen med webbkamera-overlay och exportera till video.
+A Chrome extension for recording your screen with webcam overlay and exporting to video.
 
-## Funktioner
+## Features
 
-- **Inspelningslägen:**
-  - Aktuell flik
-  - Hela skärmen
-  - Markerat område
+- **Recording Modes:**
+  - Current tab
+  - Entire screen
+  - Selected area
 
-- **Webbkamera-overlay:**
-  - Cirkulär webbkamera-bild
-  - Dragbar till valfri position
-  - Förvalda positioner (hörn)
+- **Webcam Overlay:**
+  - Circular webcam display
+  - Draggable to any position
+  - Preset positions (corners)
 
-- **Ljud:** Spela in systemljud från fliken/skärmen
+- **Audio:** Record system audio from tab/screen
 
-- **Inbyggd editor:**
-  - Trimma video (klipp bort start/slut)
-  - Förhandsvisning innan export
-  - Visuell tidslinje med drag-handles
+- **Built-in Editor:**
+  - Trim video (cut start/end)
+  - Preview before export
+  - Visual timeline with drag handles
 
-## Kompatibilitet
+## Compatibility
 
-WebM-formatet fungerar direkt med:
+WebM format works directly with:
 - ✅ YouTube
-- ✅ LinkedIn (organiska inlägg)
-- ✅ VLC, QuickTime, moderna webbläsare
+- ✅ LinkedIn (organic posts)
+- ✅ VLC, QuickTime, modern browsers
 
 ## Installation
 
-1. Öppna Chrome och gå till `chrome://extensions/`
-2. Aktivera **Developer mode** (växlare uppe till höger)
-3. Klicka på **Load unpacked**
-4. Välj mappen `chrome_record`
-5. Tillägget är nu installerat!
+1. Open Chrome and go to `chrome://extensions/`
+2. Enable **Developer mode** (toggle in top right)
+3. Click **Load unpacked**
+4. Select the `chrome_record` folder
+5. The extension is now installed!
 
-## Användning
+## Usage
 
-1. Klicka på tilläggets ikon i Chrome-verktygsfältet
-2. Välj inspelningsläge (flik/skärm/område)
-3. Aktivera/avaktivera webbkamera och ljud
-4. Välj position för webbkamera-overlay
-5. Klicka **Start Recording**
-6. Chrome frågar om tillåtelse att dela skärm/flik
-7. Inspelningen startar - webbkameran visas som en dragbar cirkel
-8. Klicka **Stop Recording** för att avsluta
-9. **Editorn öppnas** - trimma videon om du vill
-10. Klicka **Export Video** för att ladda ned
+1. Click the extension icon in the Chrome toolbar
+2. Select recording mode (tab/screen/area)
+3. Enable/disable webcam and audio
+4. Select position for webcam overlay
+5. Click **Start Recording**
+6. Chrome asks for permission to share screen/tab
+7. Recording starts - webcam appears as a draggable circle
+8. Click **Stop Recording** to finish
+9. **Editor opens** - trim the video if you want
+10. Click **Export Video** to download
 
-## Teknisk information
+## Technical Information
 
 - Manifest V3
-- Använder `desktopCapture` API för skärminspelning
-- Canvas-baserad video-compositing för webbkamera-overlay
-- MediaRecorder API för inspelning
+- Uses `desktopCapture` API for screen recording
+- Canvas-based video compositing for webcam overlay
+- MediaRecorder API for recording
 
-## Filer
+## Files
 
 ```
 chrome_record/
@@ -71,6 +71,6 @@ chrome_record/
 └── icons/             # Extension icons
 ```
 
-## Licens
+## License
 
-Detta projekt är licensierat under MIT License - se [LICENSE](LICENSE) filen för detaljer.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
